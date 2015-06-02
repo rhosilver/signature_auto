@@ -1,0 +1,30 @@
+name: auto_common_spec
+app_type: rhoelements
+version: 1.0
+vendor: rhomobile
+build: release
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator8.2"
+  entitlements: ./production/Entitlements.plist
+  codesignidentity: "iPhone Developer"
+  BundleIdentifier: "com.rhomobile.autocommonspec"
+  BundleURLScheme: "autocommonspec"
+  extensions: ["sensor", "screenorientation", "audiocapture", "barcode"]
+wp:
+  productid: 'b6479381-42a8-0130-78de-3caec51bd50e'
+  extensions: ["barcode"]
+symbian:
+  uid: '0xe1a1ef92'
+android:
+  version: 4.2.2
+  extensions: ["barcode", "screenorientation", "cardreader", "indicators", "sensor", "websocket", "eventsource", "audiocapture", "mediacapture"]
+  capabilities:
+  - native_browser
+wm:
+  #sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+  extensions: ["barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
+
+extensions: ["logCapture"]
